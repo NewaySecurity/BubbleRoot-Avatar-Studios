@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BubbleRoot Avatar Studios</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link href="styles.css" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>BubbleRoot Avatar Studios</h1>
+            <div class="logo">🫧</div>
+        </header>
+        
+        <main>
+            <section class="hero">
+                <h2>Realistic talking video with Avatar IV</h2>
+                <p>Turn a single photo and script into a high-quality avatar video using our new Avatar IV model. <a href="#">Learn more</a></p>
+            </section>
+
+            <section class="upload-section">
+                <div class="upload-area" id="uploadArea">
+                    <i class="fas fa-cloud-upload-alt"></i>
+                    <p>Upload photo or drag and drop here</p>
+                    <input type="file" id="photoInput" accept="image/*" hidden>
+                </div>
+                <p class="upload-hint">For best results, choose a photo that's at least 720p with a clear view of a face.</p>
+                
+                <div class="sample-photos">
+                    <button class="sample-btn" onclick="loadSamplePhoto()">Try a sample photo</button>
+                    <div class="sample-grid" id="sampleGrid">
+                        <div class="sample-photo" onclick="selectSample(this)">
+                            <img src="https://via.placeholder.com/100x100?text=Sample+1" alt="Sample 1">
+                        </div>
+                        <div class="sample-photo" onclick="selectSample(this)">
+                            <img src="https://via.placeholder.com/100x100?text=Sample+2" alt="Sample 2">
+                        </div>
+                        <div class="sample-photo" onclick="selectSample(this)">
+                            <img src="https://via.placeholder.com/100x100?text=Sample+3" alt="Sample 3">
+                        </div>
+                        <div class="sample-photo" onclick="selectSample(this)">
+                            <img src="https://via.placeholder.com/100x100?text=Sample+4" alt="Sample 4">
+                        </div>
+                        <div class="sample-photo" onclick="selectSample(this)">
+                            <img src="https://via.placeholder.com/100x100?text=Sample+5" alt="Sample 5">
+                        </div>
+                        <div class="sample-photo" onclick="selectSample(this)">
+                            <img src="https://via.placeholder.com/100x100?text=Sample+6" alt="Sample 6">
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="script-section">
+                <div class="input-group">
+                    <label for="scriptInput">Script *</label>
+                    <div class="script-input-container">
+                        <textarea id="scriptInput" placeholder="Type your script here, or upload or record audio" maxlength="210"></textarea>
+                        <div class="script-controls">
+                            <button type="button" class="icon-btn" title="Upload audio">
+                                <i class="fas fa-upload"></i>
+                            </button>
+                            <button type="button" class="icon-btn" title="Record audio">
+                                <i class="fas fa-microphone"></i>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="char-count">
+                        <span id="charCount">0</span> / 210 <span class="time-estimate">(15 sec max)</span>
+                    </div>
+                </div>
+
+                <div class="input-group">
+                    <label for="voiceSelect">Select voice</label>
+                    <select id="voiceSelect">
+                        <option value="">Choose a voice...</option>
+                        <option value="sarah">Sarah - Professional Female</option>
+                        <option value="mike">Mike - Professional Male</option>
+                        <option value="emma">Emma - Friendly Female</option>
+                        <option value="david">David - Authoritative Male</option>
+                    </select>
+                </div>
+
+                <div class="input-group">
+                    <label for="motionInput">Custom motion (optional)</label>
+                    <span class="beta-tag">Beta</span>
+                    <textarea id="motionInput" placeholder="Describe the gestures and facial expressions you want" rows="3"></textarea>
+                </div>
+
+                <div class="motion-controls">
+                    <button type="button" class="motion-btn" onclick="toggleExpressiveMotion()">More expressive motion</button>
+                    <span class="model-tag">Avatar IV Turbo</span>
+                </div>
+            </section>
+
+            <section class="generate-section">
+                <button type="button" class="generate-btn" onclick="generateAvatar()">
+                    <i class="fas fa-magic"></i>
+                    Generate Avatar Video
+                </button>
+                <button type="button" class="surprise-btn" onclick="surpriseMe()">
+                    <i class="fas fa-dice"></i>
+                    Surprise me
+                </button>
+            </section>
+        </main>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

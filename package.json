@@ -1,0 +1,65 @@
+{
+  "name": "bubbleroot-avatar-studios",
+  "version": "1.0.0",
+  "description": "AI-Powered Talking Avatar Generation Platform",
+  "main": "index.html",
+  "scripts": {
+    "start": "live-server --port=3000 --host=0.0.0.0",
+    "dev": "live-server --port=3000 --watch=.",
+    "build": "echo 'Building BubbleRoot Avatar Studios...' && npm run optimize",
+    "optimize": "echo 'Optimizing assets...'",
+    "deploy": "gh-pages -d .",
+    "predeploy": "npm run build",
+    "test": "echo 'Testing BubbleRoot Avatar Studios...'",
+    "lint": "echo 'Linting code...'",
+    "format": "echo 'Formatting code...'"
+  },
+  "keywords": [
+    "avatar",
+    "ai",
+    "talking-avatar",
+    "video-generation",
+    "text-to-speech",
+    "face-animation",
+    "web-app",
+    "javascript",
+    "html5",
+    "css3",
+    "bubbleroot",
+    "studios",
+    "artificial-intelligence",
+    "machine-learning",
+    "web-development"
+  ],
+  "author": {
+    "name": "NewaySecurity",
+    "email": "support@newaysecurity.com",
+    "url": "https://github.com/NewaySecurity"
+  },
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/NewaySecurity/BubbleRoot-Avatar-Studios.git"
+  },
+  "bugs": {
+    "url": "https://github.com/NewaySecurity/BubbleRoot-Avatar-Studios/issues"
+  },
+  "homepage": "https://newaysecurity.github.io/BubbleRoot-Avatar-Studios/",
+  "devDependencies": {
+    "live-server": "^1.2.2",
+    "gh-pages": "^6.0.0"
+  },
+  "dependencies": {
+    "@huggingface/inference": "^2.6.4",
+    "axios": "^1.6.0"
+  },
+  "engines": {
+    "node": ">=14.0.0",
+    "npm": ">=6.0.0"
+  },
+  "browserslist": [
+    "> 1%",
+    "last 2 versions",
+    "not dead"
+  ]
+}
